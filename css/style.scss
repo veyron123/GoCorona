@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:regular,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway:700,800&display=swap);
+
+/* --------Body------------------------------------------------------------------ */
+// Шрифт по умолчанию
+$mainFontFamily:"Rubik";
+$secondaryFontFamily:"Raleway";
+$fontSize:rem(12);
+
+// Основные цвета
+
+$mainColor:#fff;
+$mainDarkCOlor:#000000;
+$mainTextColor:#616161;
+$buttonColor:#FCFDFE;
+
+// Минимальная ширина страницы
+$minWidth: 320px;
+// Ширина полотна (макета)
+$maxWidth: 1152px;
+
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1057px;
+// Общий отступ у контейнера
+
+body {
+    height: 100%;
+    line-height: 1;
+    font-family:$mainFontFamily ;
+    font-size:$fontSize;
+    max-width:$maxWidth ;
+    margin: 0 auto;
+
+}
+
+.wrapper{
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="__container"]{
+    max-width: 1087px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+// ------- PC ---------
+
+@media (max-width: 1057px) {
+    [class*="__container"]{
+        max-width: 970px;
+    }
+}
+
+// ------- TAB ---------
+
+@media (max-width: 991.98px) {
+    [class*="__container"]{
+        max-width: 750px;
+    }
+}
+
+// ------- Mobile ---------
+
+@media (max-width: 767.98px) {
+    [class*="__container"]{
+        max-width: none;
+    }
+}
+
+/* --------Header------------------------------------------------------------------ */
+
+
+// .__container {
+
+//     display: flex;
+// }
+
+
+// .header{
+    
+//     &__container {
+//          display: flex;
+// }
+// }
+
+
+// .header__logo {
+
+//     margin-left: 52px;
+// }
+.header {
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 114px ;
+        
+    }
+    &__logo {
+        // margin: 0 281px 0 0;
+        flex: 0 0 421px;
+
+@media (max-width: 1057px) {
+        
+            flex: 0 0 221px;
+        
+    }
+}
+    &__nav {
+        
+    }
+
+    &__button__container{
+        
+        
+        display: flex;
+        flex: 0 0 252px;
+        align-items: center;
+        justify-content: center;
+        
+        
+
+        
+        text-transform: uppercase;
+        font-size: 10px;
+        
+        font-family:$secondaryFontFamily;
+        font-weight: 800;
+    }
+
+    &__button {
+
+        padding: 15px 35px;
+        border-radius: 5px;
+        background-color: #EC5863;
+        color: $buttonColor;
+        transition: background-color 0.3 ease 0s;
+        
+
+    }
+
+    &__button:hover{
+        background-color: #eb7078;
+    }
+
+    &__button_blue {
+        background-color: #4285F4;
+        transition: background-color 0.4 ease 0s;
+    }
+
+    &__button_blue:hover {
+        background-color: #5291f5;
+    }
+    
+}
+
+
+
+.menu {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap:5px 40px;
+    }
+
+
+    &__item {
+        font-family: $secondaryFontFamily;
+        color: $mainDarkCOlor;
+        font-size: 10px;
+        font-weight: 800;
+    }
+}
+
+
+@media (max-width: 1057px) {            
+    .menu {
+        &__list {
+            gap:5px 2px;    
+        }        
+    }  
+    
+    header {
+        &__logo{
+            flex: 0 0 321px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {            
+    .menu {
+        &__list {
+            gap:5px 20px;    
+        }        
+    }              
+}
+
+
+/* --------MAIN------------------------------------------------------------------ */
+.main{
+    flex: 1 1 auto;
+}
