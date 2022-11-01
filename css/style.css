@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Rubik:regular,700&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Raleway:700,800&display=swap);
 /* --------Body------------------------------------------------------------------ */
 body {
   height: 100%;
   line-height: 1;
   font-family: "Rubik";
-  font-size: rem(12);
+  font-size: rem(100);
   max-width: 1152px;
   margin: 0 auto;
 }
@@ -13,118 +13,92 @@ body {
 .wrapper {
   overflow: hidden;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-[class*="__container"] {
+[class*=__container] {
   max-width: 1087px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 @media (max-width: 1057px) {
-  [class*="__container"] {
+  [class*=__container] {
     max-width: 970px;
   }
 }
-
 @media (max-width: 991.98px) {
-  [class*="__container"] {
+  [class*=__container] {
     max-width: 750px;
   }
 }
-
 @media (max-width: 767.98px) {
-  [class*="__container"] {
+  [class*=__container] {
     max-width: none;
   }
 }
-
 /* --------Header------------------------------------------------------------------ */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
 .header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 114px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 115px;
 }
-
 .header__logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 421px;
-          flex: 0 0 421px;
+  flex: 0 0 421px;
 }
-
 @media (max-width: 1057px) {
   .header__logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 221px;
-            flex: 0 0 221px;
+    flex: 0 0 221px;
   }
 }
-
-.header__button__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+@media (max-width: 479.98px) {
+  .header__logo {
+    flex: 0 0 40px;
+    overflow: hidden;
+  }
+}
+.header__button {
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 252px;
-          flex: 0 0 252px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex: 0 0 252px;
+  align-items: center;
+  justify-content: flex-end;
   text-transform: uppercase;
   font-size: 10px;
   font-family: "Raleway";
   font-weight: 800;
 }
-
-.header__button {
+.header__button__link {
   padding: 15px 35px;
   border-radius: 5px;
-  background-color: #EC5863;
-  color: #FCFDFE;
-  -webkit-transition: background-color 0.3 ease 0s;
+  background-color: #ec5863;
+  color: #fcfdfe;
   transition: background-color 0.3 ease 0s;
 }
-
-.header__button:hover {
+.header__button__link:hover {
   background-color: #eb7078;
 }
-
-.header__button_blue {
-  background-color: #4285F4;
-  -webkit-transition: background-color 0.4 ease 0s;
+.header__button__link_blue {
+  background-color: #4285f4;
   transition: background-color 0.4 ease 0s;
 }
-
-.header__button_blue:hover {
+.header__button__link_blue:hover {
   background-color: #5291f5;
 }
 
 .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 5px 40px;
 }
-
 .menu__item {
   font-family: "Raleway";
   color: #000000;
@@ -134,29 +108,109 @@ body {
 
 @media (max-width: 1057px) {
   .menu__list {
-    gap: 5px 2px;
+    gap: 5px 25px;
   }
   header__logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 321px;
-            flex: 0 0 321px;
+    flex: 0 0 321px;
   }
 }
-
 @media (max-width: 991.98px) {
   .menu__list {
     gap: 5px 20px;
   }
 }
-
-/* --------ICON-MENU ------------------------------------------------------------------ */
-
-
-
 /* --------MAIN------------------------------------------------------------------ */
 .main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
-/*# sourceMappingURL=style.css.map */
+.getstarted {
+  position: relative;
+  padding: 170px 15px 48px 15px;
+}
+.getstarted__body {
+  display: flex;
+  margin-bottom: 60px;
+  padding-left: 13px;
+}
+.getstarted__content {
+  flex: 0 1 48%;
+  margin-top: 80px;
+}
+.getstarted__block {
+  width: 460px;
+  margin-bottom: 80px;
+}
+.getstarted__image {
+  position: relative;
+  flex: 0 1 52%;
+  z-index: 10;
+}
+.getstarted__image > img {
+  width: 100%;
+}
+.getstarted::after {
+  content: "";
+  position: absolute;
+  background-color: #ec5863;
+  top: 0;
+  right: 252px;
+  height: 100%;
+  width: 100vw;
+  transform: translate(100%, 0);
+  border-radius: 30px 0px 0px 30px;
+}
+
+.block-text__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 126%;
+  color: #000000;
+}
+.block-text__text {
+  margin-bottom: 24px;
+  font-weight: 400;
+  line-height: 138.5%;
+  letter-spacing: 0.08em;
+  color: #616161;
+}
+.btn {
+  text-align: center;
+  display: block;
+  width: 133.86px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ec5863;
+  color: #fcfdfe;
+  transition: background-color 0.3 ease 0s;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 40px;
+  /* identical to box height */
+  letter-spacing: 0.14em;
+  color: #fcfdfe;
+}
+
+.getstarted__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-getstarted__icon {
+  height: 44px;
+  width: 44px;
+  margin-left: 13px;
+}
+.footer-getstarted__body_top {
+  margin-bottom: 5px;
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 126%;
+  /* or 16px */
+  letter-spacing: 0.08em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #b0b0b0;
+}/*# sourceMappingURL=style.css.map */
